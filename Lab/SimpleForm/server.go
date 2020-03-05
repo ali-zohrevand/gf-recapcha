@@ -23,7 +23,7 @@ type PageVariables struct {
 func main() {
 	http.HandleFunc("/", DisplayRadioButtons)
 	http.HandleFunc("/selected", UserSelected)
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8888", nil))
 }
 
 func DisplayRadioButtons(w http.ResponseWriter, r *http.Request) {
