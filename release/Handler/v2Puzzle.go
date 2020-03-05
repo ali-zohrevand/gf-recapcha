@@ -27,12 +27,23 @@ func Puzzle(w http.ResponseWriter, r *http.Request) {
 			<head>
 				<script src='https://www.google.com/recaptcha/api.js'></script>
 			</head>
+ <style>
+   div.container6 {
+  height: 10em;
+  display: flex;
+  align-items: center;
+  justify-content: center }
+div.container6 p {
+  margin: 0 }
+  </style>
 			<body>
+				<div class="container6">
 				<form action="/v2?url=%s" method="post">
 					<div class="g-recaptcha" data-sitekey="%s"></div>
   				    <input type="hidden" id="adreess"  value="%s">
-					<input type="submit">
+					<input type="submit" value="Enter">
 				</form>
+				</div>
 			</body>
 		</html>
 	`, url, sitekey, url)
