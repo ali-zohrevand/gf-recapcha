@@ -1,12 +1,8 @@
 package routers
 
 import (
-	"fmt"
 	"github.com/ali-zohrevand/gf-recapcha/release/Handler"
-	"github.com/ali-zohrevand/gf-recapcha/release/util"
-	"github.com/gorilla/context"
 	"github.com/gorilla/mux"
-	"net/http"
 )
 
 func InitRoutes() *mux.Router {
