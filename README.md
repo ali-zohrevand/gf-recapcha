@@ -10,7 +10,7 @@ If the score is high enough the script redirects to the URL in the query paramet
 
 If it’s a bot (low score) we redirect to a “we think you are a bot” page. (With no advertising on it) Could also be a page with a ReCaptcha 2.x that then gives them a challenge and then we still let them through if they were a false positive (mis-identified as a bot)
 
-It’s completely independent of WordPress.
+
 
 https://example.org/?url=https://www.foo-bar.com would send the human to fooo-bar.
 
