@@ -1,3 +1,4 @@
+it is just for test and localhost
 #key
 Use this site key in the HTML code your site serves to users.
 
