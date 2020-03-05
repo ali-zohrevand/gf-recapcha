@@ -6,11 +6,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://www.google.com/recaptcha/api.js?render={{.V3Key}}"></script>
     <script>
-        grecaptcha.ready(function() {
+        grecaptcha.ready(function () {
             // do request for recaptcha token
             // response is promise with passed token
-            grecaptcha.execute({{.V3Key}}, {action:'validate_captcha'})
-                .then(function(token) {
+            grecaptcha.execute({{.V3Key}}, {action: 'validate_captcha'})
+                .then(function (token) {
                     // add token value to form
                     document.getElementById('g-recaptcha-response').value = token;
                     console.log(token);
@@ -18,16 +18,16 @@
                         type: "POST",
                         url: `/ver3`,
                         data: {
-                            "token" : token,
+                            "token": token,
                         },
-                        success: function(data) {
+                        success: function (data) {
                             window.location.replace({{.TargetUrl}});
-                          /*  if(data.response.success) {
-                                window.recaptchaScore = data.response.score;
-                                console.log('user score ' + data.response.score)
-                            }*/
+                            /*  if(data.response.success) {
+                                  window.recaptchaScore = data.response.score;
+                                  console.log('user score ' + data.response.score)
+                              }*/
                         },
-                        error: function() {
+                        error: function () {
                             console.log('error while getting google recaptcha score!');
                             window.location.href = '/puzzle?url={{.TargetUrl}}';
                         }
@@ -38,7 +38,7 @@
 </head>
 <body>
 <form id="form_id" method="post" action="">
-    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response" >
+    <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
     <input type="hidden" name="action" value="validate_captcha">
 </form>
 </body>

@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script>
-        ReCaptchaCallbackV3 = function() {
-            grecaptcha.ready(function() {
-                grecaptcha.execute("6LeVPN4UAAAAAKceUc88CvyFxc52-unnA2lAfVyN").then(function(token) {
+        ReCaptchaCallbackV3 = function () {
+            grecaptcha.ready(function () {
+                grecaptcha.execute("6LeVPN4UAAAAAKceUc88CvyFxc52-unnA2lAfVyN").then(function (token) {
                     console.log(token);
-             /*       $.ajax({
-                        type: "POST",
-                        url: `https://api.${window.appInfo.siteDomain}/v1/recaptcha/score`,
-                        data: {
-                            "token" : token,
-                        },
-                        success: function(data) {
-                            if(data.response.success) {
-                                window.recaptchaScore = data.response.score;
-                                console.log('user score ' + data.response.score)
-                            }
-                        },
-                        error: function() {
-                            console.log('error while getting google recaptcha score!')
-                        }
-                    });*/
+                    /*       $.ajax({
+                               type: "POST",
+                               url: `https://api.${window.appInfo.siteDomain}/v1/recaptcha/score`,
+                               data: {
+                                   "token" : token,
+                               },
+                               success: function(data) {
+                                   if(data.response.success) {
+                                       window.recaptchaScore = data.response.score;
+                                       console.log('user score ' + data.response.score)
+                                   }
+                               },
+                               error: function() {
+                                   console.log('error while getting google recaptcha score!')
+                               }
+                           });*/
 
                 });
             });

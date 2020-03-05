@@ -2,9 +2,9 @@
 <head>
     <title>reCAPTCHA demo: Explicit render after an onload callback</title>
     <script type="text/javascript">
-        var onloadCallback = function() {
-            grecaptcha.ready(function() {
-                grecaptcha.render('6LeVPN4UAAAAAKceUc88CvyFxc52-unnA2lAfVyN', {action: 'homepage'}).then(function(token) {
+        var onloadCallback = function () {
+            grecaptcha.ready(function () {
+                grecaptcha.render('6LeVPN4UAAAAAKceUc88CvyFxc52-unnA2lAfVyN', {action: 'homepage'}).then(function (token) {
                     console.log(token);
                 });
             })
@@ -15,8 +15,8 @@
     </script>
     <script src="https://www.google.com/recaptcha/api.js?render=6LeVPN4UAAAAAKceUc88CvyFxc52-unnA2lAfVyN"></script>
     <script>
-        grecaptcha.ready(function() {
-            grecaptcha.execute('6LeVPN4UAAAAAKceUc88CvyFxc52-unnA2lAfVyN', {action: 'homepage'}).then(function(token) {
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6LeVPN4UAAAAAKceUc88CvyFxc52-unnA2lAfVyN', {action: 'homepage'}).then(function (token) {
                 console.log(token);
             });
         });
