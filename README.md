@@ -14,5 +14,4 @@ If it’s a bot (low score) we redirect to a “we think you are a bot” page. 
 
 https://example.org/?url=https://www.foo-bar.com would send the human to fooo-bar.
 
-[![HitCount](http://hits.dwyl.com/ali-zohrevabd/gf-recaptcha.svg)](http://hits.dwyl.com/ali-zohrevabd/gf-recaptcha)
 
