@@ -11,5 +11,5 @@ func main() {
 	router := routers.InitRoutes()
 	n := negroni.Classic()
 	n.UseHandler(router)
-	log.Fatal(http.ListenAndServe(":8080", n))
+	log.Fatal(http.ListenAndServe(":80", n))
 }
